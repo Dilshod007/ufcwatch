@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+ <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+<script src='https://DOMAIN.net/videojs/video.js'></script>
+<script src="https://DOMAIN.net/videojs/videojs-http-streaming.js"></script>
+<meta charset=utf-8 />
+<title>LiveStream</title>
+<link href="https://DOMAIN.net/videojs/video-js.min.css" rel="stylesheet">
+<!-- <link href="https://DOMAIN.net/videojs/videojs-sublime-skin.min.css" rel="stylesheet"> -->
+<!-- <link href="https://DOMAIN.net/videojs/videojs-sublime-skin.css" rel="stylesheet"> -->
+<!-- <link href="https://DOMAIN.net/videojs/video-js.css" rel="stylesheet"> -->
+<!-- <link href="https://DOMAIN.net/videojs/videojs-skin-twitchy.css" rel="stylesheet" type="text/css">  -->
+</head>
+<body>
+     <video
+    id="my-video"
+    class="video-js"
+    controls
+    preload="auto"
+    width="640"
+    height="264"
+    poster="MY_VIDEO_POSTER.jpg"
+    data-setup="{}"
+  >
+          <source src="MY_VIDEO.mp4" type="video/mp4" />
+    <source src="MY_VIDEO.webm" type="video/webm" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank"
+        >supports HTML5 video</a
+      >
+    </p>
+  </video>
+
+  <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
+<center>
+
+<video-js id="live_stream" class="video-js vjs-fluid vjs-default-skin vjs-big-play-centered" controls preload="auto" autoplay="true" width="auto" height="auto" poster="https://DOMAIN.net/poster.jpg">
+
+<source src="http://192.168.1.29:8080/hls/.m3u8" type="application/x-mpegURL">
+
+    <p class='vjs-no-js'>
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
+    </p>
+</video-js>
+
+  <script>
+    var player = videojs('live_stream');
+    player.play();
+  </script>
+
+</center>
+</body>
+</html>
